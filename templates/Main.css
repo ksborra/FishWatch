@@ -1,0 +1,111 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    color:#000000;
+    }
+    .navbar{
+    padding: .8rem;
+    }
+    .navbar-brand img{
+    width: 150px;
+    height: 70px;
+    }
+    .navbar-nav li{
+    padding-right: 20px;
+    }
+    .nav-link{
+    font-size: 1.1em !important;
+    }
+    .carousel-inner img{
+    width: 100%;
+    }
+    .carousel-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    }
+    .carousel-caption h1 {
+    font-size: 500%;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 5px 5px 0px #ab9175;
+    color: #514232;
+    }
+    .carousel-caption h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 150%;
+    font-weight: 500;
+    text-transform: lowercase;
+    padding-bottom: 1rem;
+    color: #000000;
+    }
+    .btn-primary {
+    background-color: #6648b1;
+    border: 1px solid #564d7c;
+    }
+    .welcome {
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 2rem;
+    font-family: 'Amalfi Coast', sans-serif;
+    }
+    .welcome hr {
+    border-top: 2px solid #c5779d;
+    width: 150%;
+    margin-top: .3rem;
+    margin-bottom: 1rem;
+    }
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 5%;
+    background-image: linear-gradient(rgba(0,8,51,0,9),rgba(0,8,51,0,9), url(shells-bg.png));
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.search-bar{
+    width: 100%;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+    border-style:solid;
+    border-width:4px;
+    border-color:#000000;
+
+}
+
+.search-bar input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: n;
+    padding: 24px 20px;
+    font-size: 20px;
+    color: #cac7ff;
+}
+
+::placeholder{
+    color: #cac7ff;
+
+}
+
+.search-bar button img{
+    width: 25px;
+}
+
+.search-bar button{
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: #5862;
+}
