@@ -13,18 +13,20 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <link href="style.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-<script defer src="https://pyscript.net/latest/pyscript.js"></script>
+  <link href="../static/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+	<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+  <!-- <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" /> -->
+<!-- <script defer src="https://pyscript.net/latest/pyscript.js"></script> -->
 </head>
 
 <body>
   <!--- Image Slider -->
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="image" src="ocean-bg.jpeg">
+      <img src="../static/ocean-bg.jpg">
       <div class="carousel-caption">
-        <h1 class="display-2">Fish Watch!</h1>
+        <h1 class="display-2">FISH WATCH!</h1>
         <h3>- help fish straight from your house -</h3>
       </div>
     </div>
@@ -57,55 +59,57 @@
         <p>About facts of endangered species of fish in North VA.</p>
         <p>In the search bar, enter the name of the fish you want to research.</p>
         <br>
+      <h2> Options for fish: </h2>
+      <h3> atlantic-sturgeon, blackbanded-sunfish, blackside-dace,candy-darter, carolina-darter, clinch-dace, </h3>
+      <h3> duskytail-darter, emerald-shiner, golden-darter, greenfin-darter, orangefin-madtom, paddlefish,</h3>
+      <h3> roanoke-logperch, sharphead-darter, shortnose-sturgeon, sickle-darter, slender-chub, spotfin-chub,</h3>
+      <h3> steelcolor-shiner, tennessee-dace, variegate-darter, western-sand-darter, whitemouth-shiner, yellowfin-madtom</h3>
+    <h4> note: make sure to keep the dash in there instead of a space, and to keep your search term all lowercase</h4>
       </div>
-      <div class="col-lg-6">
-        <img src="ocean-bg.jpeg" class="img-fluid">
+      <div class="col-lg-6" style="margin-top:150px">
+        <img src="../static/fish-bg.webp" class="img-fluid">
       </div>
     </div>
   </div>
 
-	<!-- <div class ="container">
-		<form action="" class="search-bar" style="border-style:solid; border-width:4px;width: 100%; max-width: 700px; background: rgba(255, 255, 255, 0.2);
-        display: flex;
-        align-items: center;
-        border-radius: 60px;
-        padding: 10px 20px;">
-			<input type = "text" placeholder = "search anything" name="q" style="width:350px">
-			<button type="submit"><img src = "search.png" style="width:50px"></button>
-		</form>
-	</div> -->
+
+	<!---Map by Justin Lee -->
+	<div id = "map" style="height:300px; width: 500px;"></div>
+		<script>
+			window.onload = e => {
+				map = L.map("map", {
+					preferCanvas: true
+				}).setView([37.8, -96], 4);
+				layer_group = L.layerGroup().addTo(map);
+				let tiles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+					maxZoom: 19,
+					attribution: `&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>`
+				}).addTo(map);
+
+				L.marker([37.5214, -76.1050])
+                    .bindPopup('Example: this is Atlantic Sturgeon')
+                    .addTo(layer_group);
+			};
+		</script>
+		</div>
+
 
 	<div class = "container">
 		<form action="" class = "search-bar">
 			<input type="text" placeholder ="search anything" name = "q">
-			<button type ="submit"><img src = "icons8-search-client-24.png"></button>
+			<button type ="submit"><img src="../static/containersearch.png"></button>
 		</form>
 	</div>
 
-  <!-- <hr class="my-4" <!DOCTYPE html> -->
   <html>
 
   </head>
 
-    <!-- <div class="topnav">
-      <div class="search-container">
-        <form action="/action_page.php">
-          <input type="text" placeholder="Search.." name="search">
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-      </div>
-    </div>
-    </div> -->
-
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
-  </script>
+</script>
 
-<!-- <h5>Pyscript for Fish</h5>
-  <py-script>
-	print('hello world')
-  </py-script> -->
 
 </body>
 
